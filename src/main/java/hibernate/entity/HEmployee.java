@@ -9,7 +9,7 @@ public HEmployee() {
 	super();
 	// TODO Auto-generated constructor stub
 }
-public HEmployee(int id, String name, String gender, int salary) {
+public HEmployee( String name, String gender, int salary) {
 	super();
 	this.id = id;
 	this.name = name;
@@ -43,6 +43,7 @@ public void setSalary(int salary) {
 @Override
 public String toString() {
 	return "HEmployee [id=" + id + ", name=" + name + ", gender=" + gender + ", salary=" + salary + "]";
+	
 }
 
 }
