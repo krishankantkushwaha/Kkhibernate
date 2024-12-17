@@ -6,10 +6,7 @@
 
 <hibernate-mapping>
 	<class name="hibernate.entity.HEmployee" table="emp1">
-		<id name="id" >
-	
-		<generator class="identity"></generator>
-		</id>
+		<id name="id" ></id>
 		<property name="name" column="emp_name"/>
 		<property name="gender" />
 		<property name="salary" />

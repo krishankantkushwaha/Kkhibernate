@@ -9,7 +9,7 @@ public HEmployee() {
 	super();
 	// TODO Auto-generated constructor stub
 }
-public HEmployee( String name, String gender, int salary) {
+public HEmployee(int id, String name, String gender, int salary) {
 	super();
 	this.id = id;
 	this.name = name;
