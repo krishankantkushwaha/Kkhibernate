@@ -13,7 +13,7 @@ import hibernate.entity.HEmployee;
 public class mian { 
 
 	public static void main(String[] args) {
-		HEmployee emp = new HEmployee(7,"prasoon","male",45675);
+		HEmployee emp = new HEmployee(1,"charu","female",34675);
 		
 		StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();
 //		Metadata meta = new MetadataSources(ssr).getMetadataBuilder().build();
