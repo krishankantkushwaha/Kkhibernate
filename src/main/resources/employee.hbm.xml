@@ -8,7 +8,7 @@
 	<class name="hibernate.entity.HEmployee" table="emp1">
 		<id name="id" >
 	
-		
+		<generator class="identity"></generator>
 		</id>
 		<property name="name" column="emp_name"/>
 		<property name="gender" />
