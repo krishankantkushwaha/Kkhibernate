@@ -27,9 +27,9 @@ public class mian {
 
 //		HQL concept //
 			// Example of hql to get all records
-			Query query = session.createQuery("from emp2");
-			List<HEmployee> list = query.list();
-			System.out.println(list);
+//			Query query = session.createQuery("from emp2");
+//			List<HEmployee> list = query.list();
+//			System.out.println(list);
 
 			// for each use kiya hai line by line traversing ke liye/
 //			for(HEmployee e:list) {
@@ -56,6 +56,25 @@ public class mian {
 			// Example of hql delet Query
 //			Query query = session.createQuery("delete from emp2  where id=1");
 //			query.executeUpdate();
+		
+		
+		
+		
+		               //NAMED QUERY Concept//
+		
+		     //findEmployeeById
+//		Query<HEmployee> query = session.createNamedQuery("HEmployee.findEmployeeById",HEmployee.class);
+//		query.setParameter("id",4);
+//		
+	                           //findByGender	
+		Query<HEmployee> query = session.createNamedQuery("HEmployee.findByGender",HEmployee.class);
+		query.setParameter("gender","male");
+//		
+		                   
+		List<HEmployee> list = query.getResultList();
+		System.out.println(list);
+		
+		
 		sf.close();
 		System.out.println("mian.main()");
 	

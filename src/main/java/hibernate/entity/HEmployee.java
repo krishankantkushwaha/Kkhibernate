@@ -6,7 +6,17 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.NamedQuery;
 import jakarta.persistence.Transient;
+
+@NamedQuery(name = "HEmployee.findEmployeeById", 
+query = "FROM emp2 E where E.id=:id")
+
+@NamedQuery(name = "HEmployee.findByGender", 
+query = "SELECT e from emp2 e where e.gender=:gender")
+
+@NamedQuery(name = "HEmployee.findEmployeeName", 
+query = "FROM emp2 n where n.name=:name")
 
 @Entity(name = "emp2")
 public class HEmployee {
@@ -28,7 +38,7 @@ public class HEmployee {
 		// TODO Auto-generated constructor stub
 	}
 
-	public HEmployee(int id,String name, String gender, int salary, String company) {
+	public HEmployee(int id, String name, String gender, int salary, String company) {
 		super();
 		this.id = id;
 		this.name = name;
